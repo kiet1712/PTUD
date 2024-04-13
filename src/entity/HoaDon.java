@@ -1,22 +1,19 @@
 package entity;
 
-import java.sql.Date;
 import java.util.Objects;
 
 public class HoaDon {
     private String maHoaDon;
-    private String tenKhachHang;
+    private KhachHang tenKhachHang;
     private String soDienThoai;
-    private String nhanVienLap;
-    private float tongTien;
+    private NhanVien nhanVienLap;
 
     // Constructor
-    public HoaDon(String maHoaDon, String tenKhachHang, String soDienThoai, String nhanVienLap, Date ngayThanhToan, float tongTien) {
+    public HoaDon(String maHoaDon, KhachHang tenKhachHang, String soDienThoai, NhanVien nhanVienLap) {
         this.maHoaDon = maHoaDon;
         this.tenKhachHang = tenKhachHang;
         this.soDienThoai = soDienThoai;
         this.nhanVienLap = nhanVienLap;
-        this.tongTien = tongTien;
     }
 
     // Getters and Setters
@@ -28,11 +25,11 @@ public class HoaDon {
         this.maHoaDon = maHoaDon;
     }
 
-    public String getTenKhachHang() {
+    public KhachHang getTenKhachHang() {
         return tenKhachHang;
     }
 
-    public void setTenKhachHang(String tenKhachHang) {
+    public void setTenKhachHang(KhachHang tenKhachHang) {
         this.tenKhachHang = tenKhachHang;
     }
 
@@ -44,20 +41,12 @@ public class HoaDon {
         this.soDienThoai = soDienThoai;
     }
 
-    public String getNhanVienLap() {
+    public NhanVien getNhanVienLap() {
         return nhanVienLap;
     }
 
-    public void setNhanVienLap(String nhanVienLap) {
+    public void setNhanVienLap(NhanVien nhanVienLap) {
         this.nhanVienLap = nhanVienLap;
-    }
-
-    public float getTongTien() {
-        return tongTien;
-    }
-
-    public void setTongTien(float tongTien) {
-        this.tongTien = tongTien;
     }
 
     // hashCode method
@@ -84,6 +73,6 @@ public class HoaDon {
     @Override
     public String toString() {
         return "HoaDon [maHoaDon=" + maHoaDon + ", tenKhachHang=" + tenKhachHang + ", soDienThoai=" + soDienThoai
-                + ", nhanVienLap=" + nhanVienLap + ", tongTien=" + tongTien + "]";
+                + ", nhanVienLap=" + nhanVienLap;
     }
 }
